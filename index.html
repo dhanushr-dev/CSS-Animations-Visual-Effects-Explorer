@@ -1,0 +1,1298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="CSS Animations & Visual Effects Explorer — a complete educational reference for CSS transforms, transitions, animations, shadows, gradients, filters, clip-path, backdrop filters and creative components. Built with pure HTML5 and CSS3." />
+  <meta name="author" content="Made for CSS Learning" />
+  <title>CSS Animations &amp; Visual Effects Explorer</title>
+  <link rel="stylesheet" href="index.css" />
+</head>
+<body>
+
+  <!-- =================================================================
+       STICKY HEADER + NAVIGATION
+       ================================================================= -->
+  <header class="site-header">
+    <a href="#top" class="brand" aria-label="CSS Explorer home">
+      <span class="logo" aria-hidden="true">✦</span>
+      <span>CSS Animations &amp; Visual Effects Explorer</span>
+    </a>
+
+    <nav class="top-nav" aria-label="Primary">
+      <a href="#intro">Intro</a>
+      <a href="#sec-transform">Transform</a>
+      <a href="#sec-transition">Transition</a>
+      <a href="#sec-animation">Animation</a>
+      <a href="#sec-components">Components</a>
+      <a href="#sec-gallery">Gallery</a>
+      <a href="#sec-challenges">Challenges</a>
+    </nav>
+  </header>
+
+  <span id="top"></span>
+
+  <!-- =================================================================
+       APP SHELL — sticky sidebar + main content
+       ================================================================= -->
+  <div class="app">
+
+    <!-- ---------------------------------------------------------------
+         STICKY SIDEBAR — links to every section/topic
+         --------------------------------------------------------------- -->
+    <aside class="sidebar" aria-label="Table of contents navigation">
+      <h4>Getting Started</h4>
+      <ul>
+        <li><a href="#intro">Introduction</a></li>
+        <li><a href="#toc">Table of Contents</a></li>
+      </ul>
+
+      <h4>Sections</h4>
+      <ul>
+        <li><a href="#sec-transform">1 · CSS Transform</a></li>
+        <li><a href="#sec-transition">2 · CSS Transition</a></li>
+        <li><a href="#sec-animation">3 · CSS Animation</a></li>
+        <li><a href="#sec-shadows">4 · CSS Shadows</a></li>
+        <li><a href="#sec-gradients">5 · CSS Gradients</a></li>
+        <li><a href="#sec-filters">6 · CSS Filters</a></li>
+        <li><a href="#sec-object">7 · Object Properties</a></li>
+        <li><a href="#sec-clip">8 · Clip Path</a></li>
+        <li><a href="#sec-backdrop">9 · Backdrop Filter</a></li>
+        <li><a href="#sec-components">10 · Components</a></li>
+        <li><a href="#sec-gallery">11 · Animation Gallery</a></li>
+        <li><a href="#sec-challenges">12 · Practice</a></li>
+      </ul>
+
+      <h4>Quick Jumps</h4>
+      <ul>
+        <li><a href="#keyframes">@keyframes</a></li>
+        <li><a href="#timing-functions">Timing Functions</a></li>
+        <li><a href="#glassmorphism">Glassmorphism</a></li>
+        <li><a href="#footer">Footer</a></li>
+      </ul>
+    </aside>
+
+    <!-- ---------------------------------------------------------------
+         MAIN CONTENT
+         --------------------------------------------------------------- -->
+    <main class="main">
+
+      <!-- =============================================================
+           HERO SECTION
+           ============================================================= -->
+      <section class="hero" aria-labelledby="hero-title">
+        <span class="blob b1" aria-hidden="true"></span>
+        <span class="blob b2" aria-hidden="true"></span>
+        <span class="blob b3" aria-hidden="true"></span>
+
+        <span class="pill primary">Pure HTML5 &amp; CSS3 · No JavaScript</span>
+        <h1 id="hero-title">
+          The <span class="grad">CSS Animations</span><br />
+          &amp; Visual Effects Explorer
+        </h1>
+        <p class="lead">
+          A hands-on reference for modern CSS motion and visual styling — every property
+          comes with a definition, syntax, a live demo, copy-ready code, and pro tips.
+        </p>
+        <div class="cta">
+          <a href="#toc" class="btn btn-primary">🚀 Start Learning</a>
+          <a href="#sec-gallery" class="btn btn-ghost">🎨 View Gallery</a>
+        </div>
+
+        <div class="stats">
+          <div class="stat"><div class="num">12</div><div class="lbl">Sections</div></div>
+          <div class="stat"><div class="num">60+</div><div class="lbl">Demos</div></div>
+          <div class="stat"><div class="num">27</div><div class="lbl">Animations</div></div>
+          <div class="stat"><div class="num">0</div><div class="lbl">Lines of JS</div></div>
+        </div>
+      </section>
+
+      <!-- =============================================================
+           INTRODUCTION
+           ============================================================= -->
+      <section class="section" id="intro" aria-labelledby="intro-title">
+        <div class="section-head">
+          <div class="section-badge">i</div>
+          <div>
+            <h2 class="section-title" id="intro-title">Introduction</h2>
+            <p>Why CSS motion &amp; visuals matter, and what you'll learn.</p>
+          </div>
+        </div>
+
+        <div class="grid grid-2">
+          <article class="card">
+            <h3>✨ What are CSS Animations?</h3>
+            <p>
+              CSS animations let elements change from one style to another smoothly,
+              without JavaScript. You define <strong>@keyframes</strong> that describe
+              the styles at various points, then attach them with the
+              <code class="inline">animation</code> shorthand. The browser handles every
+              frame on the compositor thread, so they stay smooth even under load.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>🎯 Why use Animations?</h3>
+            <p>
+              Motion guides attention, communicates state changes, gives interfaces
+              personality, and makes products feel polished. Used with restraint,
+              animations improve usability: a button that subtly grows on hover tells
+              the user "I'm clickable" instantly.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>🖌️ What are CSS Visual Effects?</h3>
+            <p>
+              Visual effects cover everything that changes an element's appearance
+              without altering layout: <strong>shadows, gradients, filters,
+              clip-paths, backdrop filters</strong>, and transforms. Combined with
+              motion they create depth, realism, and the "wow" factor of modern UI.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>📚 Learning Objectives</h3>
+            <p>By the end of this guide you will be able to:</p>
+            <ul style="padding-left:18px; color:var(--c-text-soft);">
+              <li>Transform, transition &amp; animate any element</li>
+              <li>Build reusable timing &amp; keyframe patterns</li>
+              <li>Apply shadows, gradients &amp; filters confidently</li>
+              <li>Ship glassmorphism, clip-paths &amp; 25+ animation effects</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <!-- =============================================================
+           TABLE OF CONTENTS
+           ============================================================= -->
+      <section class="section" id="toc" aria-labelledby="toc-title">
+        <div class="section-head">
+          <div class="section-badge">≡</div>
+          <div>
+            <h2 class="section-title" id="toc-title">Table of Contents</h2>
+            <p>Jump straight to any topic.</p>
+          </div>
+        </div>
+
+        <nav class="toc" aria-label="Full table of contents">
+          <a href="#sec-transform"><span class="num">1</span> CSS Transform</a>
+          <a href="#sec-transition"><span class="num">2</span> CSS Transition</a>
+          <a href="#sec-animation"><span class="num">3</span> CSS Animation</a>
+          <a href="#sec-shadows"><span class="num">4</span> CSS Shadows</a>
+          <a href="#sec-gradients"><span class="num">5</span> CSS Gradients</a>
+          <a href="#sec-filters"><span class="num">6</span> CSS Filters</a>
+          <a href="#sec-object"><span class="num">7</span> Object Properties</a>
+          <a href="#sec-clip"><span class="num">8</span> Clip Path</a>
+          <a href="#sec-backdrop"><span class="num">9</span> Backdrop Filter</a>
+          <a href="#sec-components"><span class="num">10</span> Components</a>
+          <a href="#sec-gallery"><span class="num">11</span> Animation Gallery</a>
+          <a href="#sec-challenges"><span class="num">12</span> Practice Challenges</a>
+        </nav>
+      </section>
+
+      <!-- =============================================================
+           SECTION 1 — CSS TRANSFORM
+           (Sections 1–12 will be appended below in subsequent edits)
+           ============================================================= -->
+      <section class="section" id="sec-transform" aria-labelledby="transform-title">
+        <div class="section-head">
+          <div class="section-badge">1</div>
+          <div>
+            <h2 class="section-title" id="transform-title">CSS Transform</h2>
+            <p>Move, scale, rotate &amp; skew elements in 2D and 3D space. Hover any demo.</p>
+          </div>
+        </div>
+
+        <div class="callout note">
+          <span class="ico">💡</span>
+          <div><strong>Hover the demo boxes.</strong> Transforms never trigger reflow — the browser paints them on the GPU, so they're perfect for performant motion.</div>
+        </div>
+
+        <!-- transform (shorthand) -->
+        <article class="card topic">
+          <h3><code class="tag">transform</code> The master property</h3>
+          <div class="defs">
+            <div class="row"><div class="k">Definition</div><div class="v">Applies a 2D or 3D transformation to an element.</div></div>
+            <div class="row"><div class="k">Syntax</div><div class="v"><code class="inline">transform: &lt;function&gt;(...);</code></div></div>
+            <div class="row"><div class="k">Values</div><div class="v">none · translate() · scale() · rotate() · skew() · matrix() · perspective() and their 3D variants.</div></div>
+          </div>
+          <div class="stage"><div class="demo-box t-base t-matrix">Hover me</div></div>
+          <div class="code-block" data-lang="CSS"><pre>.box { transform: matrix(1.2, 0.2, 0.3, 1.2, 20, 10); }</pre></div>
+          <p class="callout tip"><span class="ico">✅</span><span><strong>Tip:</strong> Chain transforms left-to-right: <code class="inline">transform: rotate(45deg) scale(1.2);</code></span></p>
+        </article>
+
+        <div class="grid grid-3">
+          <!-- translate family -->
+          <article class="card topic">
+            <h3><code class="tag">translate()</code></h3>
+            <p>Move on X &amp; Y axes.</p>
+            <div class="stage"><div class="demo-box t-base t-translate">translate</div></div>
+            <div class="code-block" data-lang="CSS"><pre>.b:hover { transform: translate(20px, 20px); }</pre></div>
+          </article>
+
+          <article class="card topic">
+            <h3><code class="tag">translateX()</code></h3>
+            <p>Move horizontally only.</p>
+            <div class="stage"><div class="demo-box t-base t-translateX">X</div></div>
+            <div class="code-block" data-lang="CSS"><pre>.b:hover { transform: translateX(30px); }</pre></div>
+          </article>
+
+          <article class="card topic">
+            <h3><code class="tag">translateY()</code></h3>
+            <p>Move vertically only.</p>
+            <div class="stage"><div class="demo-box t-base t-translateY">Y</div></div>
+            <div class="code-block" data-lang="CSS"><pre>.b:hover { transform: translateY(-30px); }</pre></div>
+          </article>
+
+          <article class="card topic">
+            <h3><code class="tag">translate3d()</code></h3>
+            <p>Move in 3D space (X, Y, Z).</p>
+            <div class="stage"><div class="demo-box t-base t-translate3d">3D</div></div>
+            <div class="code-block" data-lang="CSS"><pre>.b:hover { transform: translate3d(20px,-20px,40px); }</pre></div>
+          </article>
+
+          <!-- scale family -->
+          <article class="card topic">
+            <h3><code class="tag">scale()</code></h3>
+            <p>Resize uniformly.</p>
+            <div class="stage"><div class="demo-box t-base t-scale">scale</div></div>
+            <div class="code-block" data-lang="CSS"><pre>.b:hover { transform: scale(1.3); }</pre></div>
+          </article>
+
+          <article class="card topic">
+            <h3><code class="tag">scaleX()</code> / <code class="tag">scaleY()</code></h3>
+            <p>Stretch on one axis.</p>
+            <div class="stage"><div class="demo-box t-base t-scaleX">X</div></div>
+            <div class="code-block" data-lang="CSS"><pre>.b:hover { transform: scaleX(1.6); }</pre></div>
+          </article>
+
+          <article class="card topic">
+            <h3><code class="tag">scale3d()</code></h3>
+            <p>Scale on X, Y, Z.</p>
+            <div class="stage"><div class="demo-box t-base t-scale3d">3D</div></div>
+            <div class="code-block" data-lang="CSS"><pre>.b:hover { transform: scale3d(1.2, 1.4, 1); }</pre></div>
+          </article>
+
+          <!-- rotate family -->
+          <article class="card topic">
+            <h3><code class="tag">rotate()</code></h3>
+            <p>Rotate in 2D plane.</p>
+            <div class="stage"><div class="demo-box t-base t-rotate">rotate</div></div>
+            <div class="code-block" data-lang="CSS"><pre>.b:hover { transform: rotate(45deg); }</pre></div>
+          </article>
+
+          <article class="card topic">
+            <h3><code class="tag">rotateX()</code></h3>
+            <p>Tilt around horizontal axis.</p>
+            <div class="stage"><div class="demo-box t-base t-rotateX">X</div></div>
+            <div class="code-block" data-lang="CSS"><pre>.b:hover { transform: perspective(400px) rotateX(55deg); }</pre></div>
+          </article>
+
+          <article class="card topic">
+            <h3><code class="tag">rotateY()</code></h3>
+            <p>Spin around vertical axis.</p>
+            <div class="stage"><div class="demo-box t-base t-rotateY">Y</div></div>
+            <div class="code-block" data-lang="CSS"><pre>.b:hover { transform: perspective(400px) rotateY(55deg); }</pre></div>
+          </article>
+
+          <article class="card topic">
+            <h3><code class="tag">rotateZ()</code></h3>
+            <p>Same as <code class="inline">rotate()</code> — about the Z axis.</p>
+            <div class="stage"><div class="demo-box t-base t-rotateZ">Z</div></div>
+            <div class="code-block" data-lang="CSS"><pre>.b:hover { transform: rotateZ(45deg); }</pre></div>
+          </article>
+
+          <article class="card topic">
+            <h3><code class="tag">rotate3d()</code></h3>
+            <p>Rotate about an arbitrary 3D vector.</p>
+            <div class="stage"><div class="demo-box t-base t-rotate3d">3D</div></div>
+            <div class="code-block" data-lang="CSS"><pre>.b:hover { transform: perspective(400px) rotate3d(1,1,1,60deg); }</pre></div>
+          </article>
+
+          <!-- skew family -->
+          <article class="card topic">
+            <h3><code class="tag">skew()</code></h3>
+            <p>Slant on X &amp; Y.</p>
+            <div class="stage"><div class="demo-box t-base t-skew">skew</div></div>
+            <div class="code-block" data-lang="CSS"><pre>.b:hover { transform: skew(20deg, 12deg); }</pre></div>
+          </article>
+
+          <article class="card topic">
+            <h3><code class="tag">skewX()</code></h3>
+            <p>Slant horizontally.</p>
+            <div class="stage"><div class="demo-box t-base t-skewX">X</div></div>
+            <div class="code-block" data-lang="CSS"><pre>.b:hover { transform: skewX(25deg); }</pre></div>
+          </article>
+
+          <article class="card topic">
+            <h3><code class="tag">skewY()</code></h3>
+            <p>Slant vertically.</p>
+            <div class="stage"><div class="demo-box t-base t-skewY">Y</div></div>
+            <div class="code-block" data-lang="CSS"><pre>.b:hover { transform: skewY(20deg); }</pre></div>
+          </article>
+
+          <article class="card topic">
+            <h3><code class="tag">matrix()</code></h3>
+            <p>All 2D transforms as one matrix.</p>
+            <div class="stage"><div class="demo-box t-base t-matrix">M</div></div>
+            <div class="code-block" data-lang="CSS"><pre>.b:hover { transform: matrix(1.2,.2,.3,1.2,20,10); }</pre></div>
+          </article>
+        </div>
+
+        <!-- transform-origin -->
+        <article class="card topic" style="margin-top:22px;">
+          <h3><code class="tag">transform-origin</code></h3>
+          <p>Sets the pivot point for transforms. <strong>Hover each box</strong> — all rotate 35° but from different origins.</p>
+          <div class="stage">
+            <div class="origin-wrap">
+              <div class="item"><div class="demo-box o-tl">TL</div><span class="lbl">top left</span></div>
+              <div class="item"><div class="demo-box o-tr">TR</div><span class="lbl">top right</span></div>
+              <div class="item"><div class="demo-box o-c">C</div><span class="lbl">center</span></div>
+              <div class="item"><div class="demo-box o-bl">BL</div><span class="lbl">bottom left</span></div>
+            </div>
+          </div>
+          <div class="code-block" data-lang="CSS"><pre>.o-tl { transform-origin: top left; }
+.o-c  { transform-origin: center; }
+/* keywords, %, or px all work */
+transform-origin: 20% 80%;</pre></div>
+        </article>
+
+        <!-- transform-style + cube -->
+        <article class="card topic">
+          <h3><code class="tag">transform-style</code> &amp; <code class="tag">preserve-3d</code></h3>
+          <p>Allows children to be positioned in 3D space. A spinning cube made of 6 faces:</p>
+          <div class="stage">
+            <div class="cube-scene">
+              <div class="cube">
+                <div class="face f1">1</div><div class="face f2">2</div>
+                <div class="face f3">3</div><div class="face f4">4</div>
+                <div class="face f5">5</div><div class="face f6">6</div>
+              </div>
+            </div>
+          </div>
+          <div class="code-block" data-lang="CSS"><pre>.cube { transform-style: preserve-3d; animation: cubeSpin 9s linear infinite; }</pre></div>
+        </article>
+
+        <!-- perspective -->
+        <article class="card topic">
+          <h3><code class="tag">perspective</code></h3>
+          <p>Sets the viewer's distance — smaller = more dramatic 3D.</p>
+          <div class="stage">
+            <div class="persp-row">
+              <div class="demo-box d1">20°</div>
+              <div class="demo-box d2">35°</div>
+              <div class="demo-box d3">50°</div>
+              <div class="demo-box d4">65°</div>
+            </div>
+          </div>
+          <div class="code-block" data-lang="CSS"><pre>.persp-row { perspective: 500px; }
+.d1 { transform: rotateY(20deg); }</pre></div>
+        </article>
+
+        <!-- perspective-origin -->
+        <article class="card topic">
+          <h3><code class="tag">perspective-origin</code></h3>
+          <p>Where the vanishing point sits. <strong>Hover</strong> to rotate; the right cube is viewed from the top-left.</p>
+          <div class="stage">
+            <div class="po-wrap">
+              <div class="scene"><div class="demo-box">center</div></div>
+              <div class="scene alt"><div class="demo-box">left top</div></div>
+            </div>
+          </div>
+          <div class="code-block" data-lang="CSS"><pre>.scene     { perspective: 400px; perspective-origin: center; }
+.scene.alt { perspective-origin: left top; }</pre></div>
+        </article>
+
+        <!-- backface-visibility -->
+        <article class="card topic">
+          <h3><code class="tag">backface-visibility</code></h3>
+          <p>Hide an element's back face during 3D rotation. <strong>Hover</strong> the cards to flip — left hides the back, right shows it.</p>
+          <div class="stage">
+            <div class="bf-wrap">
+              <div class="bf-card"><div class="face front">hidden</div><div class="face back">BACK</div></div>
+              <div class="bf-card show"><div class="face front">visible</div><div class="face back">BACK</div></div>
+            </div>
+          </div>
+          <div class="code-block" data-lang="CSS"><pre>.face   { backface-visibility: hidden; }
+.face.back { transform: rotateY(180deg); }
+.bf-card { transition: transform .6s; }
+.bf-card:hover { transform: rotateY(180deg); }</pre></div>
+          <p class="callout tip"><span class="ico">✅</span><span><strong>Use case:</strong> flip cards, playing cards, 3D carousels.</span></p>
+        </article>
+      </section>
+
+      <!-- =============================================================
+           SECTION 2 — CSS TRANSITION  (placeholder, content below)
+           ============================================================= -->
+      <section class="section" id="sec-transition" aria-labelledby="transition-title">
+        <div class="section-head">
+          <div class="section-badge">2</div>
+          <div>
+            <h2 class="section-title" id="transition-title">CSS Transition</h2>
+            <p>Smoothly interpolate between two states — usually triggered on hover/focus.</p>
+          </div>
+        </div>
+
+        <article class="card topic">
+          <h3><code class="tag">transition</code> shorthand</h3>
+          <div class="defs">
+            <div class="row"><div class="k">Definition</div><div class="v">Animates changes to CSS properties over a duration.</div></div>
+            <div class="row"><div class="k">Syntax</div><div class="v"><code class="inline">transition: property duration timing-function delay;</code></div></div>
+            <div class="row"><div class="k">Example</div><div class="v"><code class="inline">transition: transform .35s ease .1s;</code></div></div>
+          </div>
+        </article>
+
+        <div class="grid grid-3">
+          <article class="card topic">
+            <h3><code class="tag">transition-property</code></h3>
+            <p>Which property animates. <strong>Hover</strong> to compare.</p>
+            <div class="stage" style="gap:14px; display:flex; flex-wrap:wrap; justify-content:center;">
+              <div class="demo-box tr-base tr-all">all</div>
+              <div class="demo-box tr-base tr-bg">background</div>
+              <div class="demo-box tr-base tr-transform">transform</div>
+            </div>
+            <div class="code-block" data-lang="CSS"><pre>.tr-bg { transition-property: background; }
+.tr-bg:hover { background: var(--grad-warm); }</pre></div>
+          </article>
+
+          <article class="card topic">
+            <h3><code class="tag">transition-duration</code></h3>
+            <p>How long it lasts. 0.2s vs 0.6s vs 1.2s:</p>
+            <div class="stage" style="gap:14px; display:flex; flex-wrap:wrap; justify-content:center;">
+              <div class="demo-box tr-d1">0.2s</div>
+              <div class="demo-box tr-d2">0.6s</div>
+              <div class="demo-box tr-d3">1.2s</div>
+            </div>
+            <div class="code-block" data-lang="CSS"><pre>.tr-d1 { transition: transform .2s var(--ease); }
+.tr-d3 { transition: transform 1.2s var(--ease); }</pre></div>
+          </article>
+
+          <article class="card topic">
+            <h3><code class="tag">transition-delay</code></h3>
+            <p>Wait before it starts. 0.2s · 0.6s · 1s:</p>
+            <div class="stage" style="gap:14px; display:flex; flex-wrap:wrap; justify-content:center;">
+              <div class="demo-box tr-delay1">.2s</div>
+              <div class="demo-box tr-delay2">.6s</div>
+              <div class="demo-box tr-delay3">1s</div>
+            </div>
+            <div class="code-block" data-lang="CSS"><pre>.tr-delay2 { transition: transform .4s ease .6s; }
+.tr-delay2:hover { transform: translateY(-24px); }</pre></div>
+          </article>
+        </div>
+
+        <!-- Timing functions -->
+        <article class="card topic" id="timing-functions" style="margin-top:22px;">
+          <h3><code class="tag">transition-timing-function</code> &amp; easing curves</h3>
+          <p>The mathematical curve that controls acceleration. <strong>Hover each track</strong> and watch how the ball accelerates.</p>
+
+          <div class="grid grid-2" style="margin-top:14px;">
+            <div>
+              <div class="tf-track tf-ease"><span class="ball"></span></div>
+              <div class="tf-label">ease</div>
+            </div>
+            <div>
+              <div class="tf-track tf-linear"><span class="ball"></span></div>
+              <div class="tf-label">linear</div>
+            </div>
+            <div>
+              <div class="tf-track tf-ease-in"><span class="ball"></span></div>
+              <div class="tf-label">ease-in</div>
+            </div>
+            <div>
+              <div class="tf-track tf-ease-out"><span class="ball"></span></div>
+              <div class="tf-label">ease-out</div>
+            </div>
+            <div>
+              <div class="tf-track tf-ease-in-out"><span class="ball"></span></div>
+              <div class="tf-label">ease-in-out</div>
+            </div>
+            <div>
+              <div class="tf-track tf-step-start"><span class="ball"></span></div>
+              <div class="tf-label">step-start</div>
+            </div>
+            <div>
+              <div class="tf-track tf-step-end"><span class="ball"></span></div>
+              <div class="tf-label">step-end</div>
+            </div>
+            <div>
+              <div class="tf-track tf-steps"><span class="ball"></span></div>
+              <div class="tf-label">steps(8)</div>
+            </div>
+            <div>
+              <div class="tf-track tf-bezier"><span class="ball"></span></div>
+              <div class="tf-label">cubic-bezier(.68,-.55,.27,1.55)</div>
+            </div>
+          </div>
+
+          <div class="code-block" data-lang="CSS"><pre>/* built-in */
+transition-timing-function: ease-in-out;
+
+/* discrete steps */
+transition-timing-function: steps(8, end);
+
+/* custom curve — visit cubic-bezier.com */
+transition-timing-function: cubic-bezier(0.68, -0.55, 0.27, 1.55);</pre></div>
+          <p class="callout tip"><span class="ico">✅</span><span><strong>Tip:</strong> <code class="inline">ease-out</code> feels most natural for UI — fast start, soft landing.</span></p>
+        </article>
+      </section>
+
+      <!-- =============================================================
+           SECTION 3 — CSS ANIMATION
+           ============================================================= -->
+      <section class="section" id="sec-animation" aria-labelledby="animation-title">
+        <div class="section-head">
+          <div class="section-badge">3</div>
+          <div>
+            <h2 class="section-title" id="animation-title">CSS Animation</h2>
+            <p>Define keyframes once, then play them with full control over timing, direction &amp; repetition.</p>
+          </div>
+        </div>
+
+        <!-- @keyframes -->
+        <article class="card topic" id="keyframes">
+          <h3><code class="tag">@keyframes</code></h3>
+          <div class="defs">
+            <div class="row"><div class="k">Definition</div><div class="v">At-rule that defines the styles at each step of an animation.</div></div>
+            <div class="row"><div class="k">Syntax</div><div class="v"><code class="inline">@keyframes name { 0% {…} 100% {…} }</code></div></div>
+            <div class="row"><div class="k">Markers</div><div class="v"><code class="inline">from</code> (=0%) and <code class="inline">to</code> (=100%), or any percentage.</div></div>
+          </div>
+          <div class="code-block" data-lang="CSS"><pre>@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50%      { transform: scale(1.15); }
+}
+.box { animation: pulse 1.6s ease-in-out infinite; }</pre></div>
+        </article>
+
+        <!-- Animation sub-properties -->
+        <div class="grid grid-2">
+          <article class="card topic">
+            <h3><code class="tag">animation-name</code></h3>
+            <p>References the <code class="inline">@keyframes</code> to use.</p>
+            <div class="stage"><div class="demo-box a-pulse">pulse</div></div>
+            <div class="code-block" data-lang="CSS"><pre>.box { animation-name: pulse; }</pre></div>
+          </article>
+
+          <article class="card topic">
+            <h3><code class="tag">animation-duration</code></h3>
+            <p>Length of one cycle.</p>
+            <div class="stage"><div class="demo-box a-rotate">3s</div></div>
+            <div class="code-block" data-lang="CSS"><pre>.box { animation-duration: 3s; }</pre></div>
+          </article>
+
+          <article class="card topic">
+            <h3><code class="tag">animation-delay</code></h3>
+            <p>Wait before starting.</p>
+            <div class="stage"><div class="demo-box a-fade">delayed</div></div>
+            <div class="code-block" data-lang="CSS"><pre>.box { animation: fade 2s ease 0.5s infinite alternate; }</pre></div>
+          </article>
+
+          <article class="card topic">
+            <h3><code class="tag">animation-direction</code></h3>
+            <p>normal · reverse · alternate · alternate-reverse.</p>
+            <div class="stage"><div class="demo-box a-zoom">alternate</div></div>
+            <div class="code-block" data-lang="CSS"><pre>.box { animation-direction: alternate; }</pre></div>
+          </article>
+
+          <article class="card topic">
+            <h3><code class="tag">animation-fill-mode</code></h3>
+            <p>Which styles apply before/after — none · forwards · backwards · both.</p>
+            <div class="stage"><div class="demo-box a-float">both</div></div>
+            <div class="code-block" data-lang="CSS"><pre>.box { animation-fill-mode: both; }</pre></div>
+          </article>
+
+          <article class="card topic">
+            <h3><code class="tag">animation-iteration-count</code></h3>
+            <p>How many times to loop. Use <code class="inline">infinite</code>.</p>
+            <div class="stage"><div class="demo-box a-spin">∞</div></div>
+            <div class="code-block" data-lang="CSS"><pre>.box { animation-iteration-count: infinite; }</pre></div>
+          </article>
+
+          <article class="card topic">
+            <h3><code class="tag">animation-play-state</code></h3>
+            <p>running · paused. <strong>Hover</strong> the spinner to pause.</p>
+            <div class="stage"><div class="spinner" style="animation-play-state:running;">​</div></div>
+            <p style="text-align:center; font-size:0.82rem; color:var(--c-text-muted);">Hover via <code class="inline">.spinner:hover { animation-play-state: paused; }</code></p>
+            <div class="code-block" data-lang="CSS"><pre>.box { animation-play-state: running; }
+.box:hover { animation-play-state: paused; }</pre></div>
+          </article>
+
+          <article class="card topic">
+            <h3><code class="tag">animation-timing-function</code></h3>
+            <p>Same curves as transitions — ease, steps(), cubic-bezier()…</p>
+            <div class="stage"><div class="demo-box a-bounce">bounce</div></div>
+            <div class="code-block" data-lang="CSS"><pre>.box { animation-timing-function: cubic-bezier(.5, 0, .5, 1); }</pre></div>
+          </article>
+        </div>
+
+        <!-- Shorthand -->
+        <article class="card topic" style="margin-top:22px;">
+          <h3><code class="tag">animation</code> shorthand — order matters</h3>
+          <div class="code-block" data-lang="CSS"><pre>/* name | duration | easing | delay | count | direction | fill-mode | play-state */
+.box {
+  animation: pulse 1.6s ease-in-out 0s infinite alternate both running;
+}</pre></div>
+          <p class="callout warning"><span class="ico">⚠️</span><span><strong>Note:</strong> the first time value is duration, the second is delay. Mixing them up is the most common animation bug.</span></p>
+        </article>
+
+        <h3 class="sub">🎬 18 Named Animation Demos</h3>
+        <div class="grid grid-3">
+          <article class="card"><div class="stage"><div class="demo-box a-fade">Fade</div></div><div class="code-block" data-lang="CSS"><pre>@keyframes fade{from{opacity:0}to{opacity:1}}</pre></div></article>
+          <article class="card"><div class="stage"><div class="demo-box a-slide">Slide</div></div><div class="code-block" data-lang="CSS"><pre>@keyframes slide{from{transform:translateX(-80px);opacity:0}}</pre></div></article>
+          <article class="card"><div class="stage"><div class="demo-box a-bounce">Bounce</div></div><div class="code-block" data-lang="CSS"><pre>@keyframes bounce{40%{translateY(-30px)}60%{translateY(-15px)}}</pre></div></article>
+          <article class="card"><div class="stage"><div class="demo-box a-rotate">Rotate</div></div><div class="code-block" data-lang="CSS"><pre>@keyframes rotate{to{transform:rotate(360deg)}}</pre></div></article>
+          <article class="card"><div class="stage"><div class="demo-box a-pulse">Pulse</div></div><div class="code-block" data-lang="CSS"><pre>@keyframes pulse{50%{transform:scale(1.15)}}</pre></div></article>
+          <article class="card"><div class="stage"><div class="demo-box a-zoom">Zoom</div></div><div class="code-block" data-lang="CSS"><pre>@keyframes zoom{from{scale(.4)}to{scale(1.2)}}</pre></div></article>
+          <article class="card"><div class="stage"><div class="demo-box a-spin">Spin</div></div><div class="code-block" data-lang="CSS"><pre>@keyframes spin{to{transform:rotate(720deg)}}</pre></div></article>
+          <article class="card"><div class="stage"><div class="demo-box a-shake">Shake</div></div><div class="code-block" data-lang="CSS"><pre>@keyframes shake{20%,60%{X(-12px)}40%,80%{X(12px)}}</pre></div></article>
+          <article class="card"><div class="stage"><div class="demo-box a-swing">Swing</div></div><div class="code-block" data-lang="CSS"><pre>@keyframes swing{20%{rotate(15deg)}40%{rotate(-12deg)}}</pre></div></article>
+          <article class="card"><div class="stage"><div class="demo-box a-flip">Flip</div></div><div class="code-block" data-lang="CSS"><pre>@keyframes flip{to{rotateY(360deg)}}</pre></div></article>
+          <article class="card"><div class="stage"><div class="demo-box a-heart">♥</div></div><div class="code-block" data-lang="CSS"><pre>@keyframes heart{15%{scale(1.3)}45%{scale(1.25)}}</pre></div></article>
+          <article class="card"><div class="stage"><div class="spinner"></div></div><div class="code-block" data-lang="CSS"><pre>.spinner{border-top-color:#7c5cff;animation:spin .9s linear infinite}</pre></div></article>
+          <article class="card"><div class="stage"><div class="typing">CSS is awesome!</div></div><div class="code-block" data-lang="CSS"><pre>.typing{width:0;animation:typing 4s steps(22) infinite alternate, caret .7s step-end infinite}</pre></div></article>
+          <article class="card"><div class="stage"><div class="progress"><div class="bar"></div></div></div><div class="code-block" data-lang="CSS"><pre>@keyframes fill{70%,100%{width:100%}}</pre></div></article>
+          <article class="card"><div class="stage"><div class="demo-box a-float">Float</div></div><div class="code-block" data-lang="CSS"><pre>@keyframes float{50%{translateY(-18px)}}</pre></div></article>
+          <article class="card"><div class="stage"><div class="demo-box a-blink">Blink</div></div><div class="code-block" data-lang="CSS"><pre>@keyframes blink{50%{opacity:.15}animation:1s steps(1)}</pre></div></article>
+          <article class="card"><div class="stage"><div class="wave"><span></span><span></span><span></span><span></span><span></span></div></div><div class="code-block" data-lang="CSS"><pre>@keyframes waveBar{50%{transform:scaleY(1)}}/* staggered delays */</pre></div></article>
+          <article class="card"><div class="stage"><div class="demo-box a-glow">Glow</div></div><div class="code-block" data-lang="CSS"><pre>@keyframes glow{50%{box-shadow:0 0 44px var(--cyan)}}</pre></div></article>
+        </div>
+      </section>
+
+      <!-- =============================================================
+           SECTION 4 — CSS SHADOWS
+           ============================================================= -->
+      <section class="section" id="sec-shadows" aria-labelledby="shadows-title">
+        <div class="section-head">
+          <div class="section-badge">4</div>
+          <div>
+            <h2 class="section-title" id="shadows-title">CSS Shadows</h2>
+            <p>Add depth with <code class="inline">box-shadow</code> &amp; <code class="inline">text-shadow</code>.</p>
+          </div>
+        </div>
+
+        <article class="card topic">
+          <h3><code class="tag">box-shadow</code> syntax</h3>
+          <div class="code-block" data-lang="CSS"><pre>box-shadow: [inset] offsetX offsetY blurRadius spreadRadius color;</pre></div>
+        </article>
+
+        <article class="card topic">
+          <h4 class="sub">Eight flavours side by side</h4>
+          <div class="shadow-stage">
+            <div class="shadow-card sh-none">none</div>
+            <div class="shadow-card sh-soft">soft</div>
+            <div class="shadow-card sh-elevated">elevated</div>
+            <div class="shadow-card sh-inset">inset</div>
+            <div class="shadow-card sh-multi">multiple</div>
+            <div class="shadow-card sh-colored">colored</div>
+            <div class="shadow-card sh-neon">neon glow</div>
+            <div class="shadow-card sh-floating">floating</div>
+          </div>
+          <div class="code-block" data-lang="CSS"><pre>/* soft */      box-shadow: 0 4px 14px rgba(0,0,0,.35);
+/* inset */     box-shadow: inset 0 4px 16px rgba(0,0,0,.6);
+/* multiple */  box-shadow: 0 4px 10px rgba(124,92,255,.4), 0 10px 24px rgba(33,212,253,.3);
+/* neon */      box-shadow: 0 0 8px #ff2e88, 0 0 18px #ff2e88, 0 0 36px #ff2e88;</pre></div>
+        </article>
+
+        <article class="card topic">
+          <h3><code class="tag">text-shadow</code></h3>
+          <div class="ts-row">
+            <div class="ts-item ts-soft">Soft Shadow</div>
+            <div class="ts-item ts-hard">Hard Shadow</div>
+            <div class="ts-item ts-neon">NEON</div>
+            <div class="ts-item ts-glow">Glow</div>
+            <div class="ts-item ts-3d">3D Text</div>
+          </div>
+          <div class="code-block" data-lang="CSS"><pre>.ts-neon { text-shadow: 0 0 6px #ff2e88, 0 0 14px #ff2e88, 0 0 28px #ff2e88; }
+.ts-3d   { text-shadow: 1px 1px 0 #5a3eff, 2px 2px 0 #5a3eff, 3px 3px 0 #5a3eff, 4px 4px 6px rgba(0,0,0,.5); }</pre></div>
+        </article>
+      </section>
+
+      <!-- =============================================================
+           SECTION 5 — CSS GRADIENTS
+           ============================================================= -->
+      <section class="section" id="sec-gradients" aria-labelledby="gradients-title">
+        <div class="section-head">
+          <div class="section-badge">5</div>
+          <div>
+            <h2 class="section-title" id="gradients-title">CSS Gradients</h2>
+            <p>Smooth blends of color — for backgrounds, text, borders &amp; more.</p>
+          </div>
+        </div>
+
+        <article class="card topic">
+          <h4 class="sub">Gradient types</h4>
+          <div class="grad-stage">
+            <div class="grad-box g-linear">linear-gradient</div>
+            <div class="grad-box g-radial">radial-gradient</div>
+            <div class="grad-box g-conic">conic-gradient</div>
+            <div class="grad-box g-stops">multiple stops</div>
+            <div class="grad-box g-repeat">repeating-linear</div>
+            <div class="grad-box g-repeat-r">repeating-radial</div>
+          </div>
+          <div class="code-block" data-lang="CSS"><pre>linear-gradient(135deg, #7c5cff, #21d4fd);
+radial-gradient(circle at 30% 30%, #ff5c8a, #7c5cff);
+conic-gradient(from 0deg, #7c5cff, #21d4fd, #38e3a4, #ff5c8a, #7c5cff);
+repeating-linear-gradient(45deg, #7c5cff 0 14px, #21d4fd 14px 28px);</pre></div>
+        </article>
+
+        <div class="grid grid-2">
+          <article class="card topic">
+            <h3>🌈 Gradient Text</h3>
+            <div class="stage"><span class="gtext">Shimmer</span></div>
+            <div class="code-block" data-lang="CSS"><pre>.gtext {
+  background: linear-gradient(90deg,#7c5cff,#21d4fd,#38e3a4,#ff5c8a);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: shimmer 4s linear infinite;
+}</pre></div>
+          </article>
+
+          <article class="card topic">
+            <h3>🖼️ Gradient Border</h3>
+            <div class="stage"><div class="gborder">Gradient border via mask</div></div>
+            <div class="code-block" data-lang="CSS"><pre>.gborder::before {
+  padding: 2px;
+  background: var(--grad-brand);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+          mask-composite: exclude;
+}</pre></div>
+          </article>
+
+          <article class="card topic">
+            <h3>🔘 Gradient Button</h3>
+            <div class="stage"><button class="btn-gradient">Hover me</button></div>
+            <div class="code-block" data-lang="CSS"><pre>.btn-gradient {
+  background: linear-gradient(135deg, #7c5cff, #21d4fd);
+  background-size: 200% auto;
+  transition: background-position .35s;
+}
+.btn-gradient:hover { background-position: right center; }</pre></div>
+          </article>
+
+          <article class="card topic">
+            <h3>🃏 Gradient Card</h3>
+            <div class="stage"><div class="gcard">A vibrant card built from a single gradient.</div></div>
+            <div class="code-block" data-lang="CSS"><pre>.gcard {
+  background: linear-gradient(160deg, rgba(124,92,255,.9), rgba(33,212,253,.85));
+  color: #fff;
+  box-shadow: var(--sh-md);
+}</pre></div>
+          </article>
+        </div>
+      </section>
+
+      <!-- =============================================================
+           SECTION 6 — CSS FILTERS
+           ============================================================= -->
+      <section class="section" id="sec-filters" aria-labelledby="filters-title">
+        <div class="section-head">
+          <div class="section-badge">6</div>
+          <div>
+            <h2 class="section-title" id="filters-title">CSS Filters</h2>
+            <p>Apply Photoshop-style effects: blur, brightness, hue-rotate &amp; more.</p>
+          </div>
+        </div>
+
+        <article class="card topic">
+          <h4 class="sub">Before &amp; After — 10 filters</h4>
+          <div class="filter-grid">
+            <div class="filter-cell"><div class="img original"></div><div class="lbl">original</div></div>
+            <div class="filter-cell"><div class="img f-blur"></div><div class="lbl">blur(3px)</div></div>
+            <div class="filter-cell"><div class="img f-brightness"></div><div class="lbl">brightness(1.5)</div></div>
+            <div class="filter-cell"><div class="img f-contrast"></div><div class="lbl">contrast(180%)</div></div>
+            <div class="filter-cell"><div class="img f-drop"></div><div class="lbl">drop-shadow()</div></div>
+            <div class="filter-cell"><div class="img f-gray"></div><div class="lbl">grayscale(100%)</div></div>
+            <div class="filter-cell"><div class="img f-hue"></div><div class="lbl">hue-rotate(140deg)</div></div>
+            <div class="filter-cell"><div class="img f-invert"></div><div class="lbl">invert(100%)</div></div>
+            <div class="filter-cell"><div class="img f-opacity"></div><div class="lbl">opacity(.45)</div></div>
+            <div class="filter-cell"><div class="img f-saturate"></div><div class="lbl">saturate(250%)</div></div>
+            <div class="filter-cell"><div class="img f-sepia"></div><div class="lbl">sepia(100%)</div></div>
+          </div>
+          <div class="code-block" data-lang="CSS"><pre>img:hover { filter: grayscale(100%) brightness(1.2); }
+/* chain filters — they apply left to right */</pre></div>
+          <p class="callout tip"><span class="ico">✅</span><span><strong>Tip:</strong> <code class="inline">drop-shadow()</code> follows the element's actual shape (great for PNGs), unlike <code class="inline">box-shadow</code> which uses the box.</span></p>
+        </article>
+      </section>
+
+      <!-- =============================================================
+           SECTION 7 — OBJECT PROPERTIES
+           ============================================================= -->
+      <section class="section" id="sec-object" aria-labelledby="object-title">
+        <div class="section-head">
+          <div class="section-badge">7</div>
+          <div>
+            <h2 class="section-title" id="object-title">Object Properties</h2>
+            <p>Control how an <code class="inline">&lt;img&gt;</code> or <code class="inline">&lt;video&gt;</code> fits its box.</p>
+          </div>
+        </div>
+
+        <article class="card topic">
+          <h4 class="sub"><code class="tag">object-fit</code> values</h4>
+          <div class="obj-grid">
+            <div class="obj-cell obj-fill"><div class="frame"><img src="https://picsum.photos/seed/css1/400/250" alt="fill demo" loading="lazy" /></div><div class="lbl">fill</div></div>
+            <div class="obj-cell obj-contain"><div class="frame"><img src="https://picsum.photos/seed/css2/400/250" alt="contain demo" loading="lazy" /></div><div class="lbl">contain</div></div>
+            <div class="obj-cell obj-cover"><div class="frame"><img src="https://picsum.photos/seed/css3/400/250" alt="cover demo" loading="lazy" /></div><div class="lbl">cover</div></div>
+            <div class="obj-cell obj-none"><div class="frame"><img src="https://picsum.photos/seed/css4/400/250" alt="none demo" loading="lazy" /></div><div class="lbl">none</div></div>
+            <div class="obj-cell obj-scaledn"><div class="frame"><img src="https://picsum.photos/seed/css5/400/250" alt="scale-down demo" loading="lazy" /></div><div class="lbl">scale-down</div></div>
+            <div class="obj-cell obj-pos"><div class="frame"><img src="https://picsum.photos/seed/css6/400/250" alt="object-position demo" loading="lazy" /></div><div class="lbl">object-position: right top</div></div>
+          </div>
+          <div class="code-block" data-lang="CSS"><pre>.cover { object-fit: cover; }      /* fills box, crops excess — most common */
+.fill  { object-fit: fill; }       /* stretches, distorts */
+.contain { object-fit: contain; }  /* whole image, letterboxed */
+img { object-position: right top; }</pre></div>
+        </article>
+      </section>
+
+      <!-- =============================================================
+           SECTION 8 — CLIP PATH
+           ============================================================= -->
+      <section class="section" id="sec-clip" aria-labelledby="clip-title">
+        <div class="section-head">
+          <div class="section-badge">8</div>
+          <div>
+            <h2 class="section-title" id="clip-title">Clip Path</h2>
+            <p>Cut shapes out of any element — circles, polygons, stars &amp; custom.</p>
+          </div>
+        </div>
+
+        <article class="card topic">
+          <div class="clip-grid">
+            <div class="clip-cell"><div class="shape cp-circle"></div><div class="lbl">circle()</div></div>
+            <div class="clip-cell"><div class="shape cp-ellipse"></div><div class="lbl">ellipse()</div></div>
+            <div class="clip-cell"><div class="shape cp-triangle"></div><div class="lbl">triangle</div></div>
+            <div class="clip-cell"><div class="shape cp-hexagon"></div><div class="lbl">hexagon</div></div>
+            <div class="clip-cell"><div class="shape cp-star"></div><div class="lbl">star</div></div>
+            <div class="clip-cell"><div class="shape cp-rhombus"></div><div class="lbl">rhombus</div></div>
+            <div class="clip-cell"><div class="shape cp-msg"></div><div class="lbl">speech bubble</div></div>
+            <div class="clip-cell"><div class="shape cp-arrow"></div><div class="lbl">arrow</div></div>
+          </div>
+          <div class="code-block" data-lang="CSS"><pre>.cp-circle  { clip-path: circle(50% at 50% 50%); }
+.cp-star    { clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%); }
+.cp-msg     { clip-path: polygon(0 0,100% 0,100% 75%,60% 75%,50% 100%,40% 75%,0 75%); }</pre></div>
+          <p class="callout tip"><span class="ico">✅</span><span><strong>Tip:</strong> use <a href="https://bennettfeely.com/clippy/" target="_blank" rel="noopener">Clippy</a> to drag-edit polygon points visually.</span></p>
+        </article>
+      </section>
+
+      <!-- =============================================================
+           SECTION 9 — BACKDROP FILTER / GLASSMORPHISM
+           ============================================================= -->
+      <section class="section" id="sec-backdrop" aria-labelledby="backdrop-title">
+        <div class="section-head">
+          <div class="section-badge">9</div>
+          <div>
+            <h2 class="section-title" id="backdrop-title">Backdrop Filter</h2>
+            <p>Apply filters to whatever is <em>behind</em> an element — the key to glassmorphism.</p>
+          </div>
+        </div>
+
+        <article class="card topic" id="glassmorphism">
+          <h4 class="sub">The Glassmorphism Recipe</h4>
+          <div class="glass-stage">
+            <div class="glass-card">
+              <h4>🧊 Frosted Glass Card</h4>
+              <p style="font-size:.9rem;">Semi-transparent background + <code class="inline">backdrop-filter: blur()</code> over a colorful backdrop.</p>
+            </div>
+          </div>
+          <div class="code-block" data-lang="CSS"><pre>.glass-card {
+  background: rgba(255,255,255,.12);
+  border: 1px solid rgba(255,255,255,.25);
+  backdrop-filter: blur(14px) saturate(180%);
+  -webkit-backdrop-filter: blur(14px) saturate(180%);
+}</pre></div>
+        </article>
+
+        <article class="card topic">
+          <h4 class="sub">Backdrop filter functions</h4>
+          <div class="bf-row">
+            <div class="bf-cell bf-blur"><div class="panel">blur(6px)</div></div>
+            <div class="bf-cell bf-brightness"><div class="panel">brightness(1.6)</div></div>
+            <div class="bf-cell bf-contrast"><div class="panel">contrast(180%)</div></div>
+            <div class="bf-cell bf-glass"><div class="panel">glass</div></div>
+          </div>
+        </article>
+
+        <article class="card topic">
+          <h4 class="sub">Transparent navigation bar</h4>
+          <div class="glass-stage" style="min-height:160px;">
+            <nav class="glass-nav" aria-label="Glass demo nav">
+              <a href="#sec-backdrop">Home</a>
+              <a href="#sec-backdrop">Features</a>
+              <a href="#sec-backdrop">Pricing</a>
+              <a href="#sec-backdrop">Contact</a>
+            </nav>
+          </div>
+          <p class="callout warning"><span class="ico">⚠️</span><span><strong>Browser note:</strong> Firefox needs <code class="inline">layout.css.backdrop-filter.enabled</code> historically; always include the <code class="inline">-webkit-</code> prefix for Safari.</span></p>
+        </article>
+      </section>
+
+      <!-- =============================================================
+           SECTION 10 — CREATIVE COMPONENTS
+           ============================================================= -->
+      <section class="section" id="sec-components" aria-labelledby="components-title">
+        <div class="section-head">
+          <div class="section-badge">10</div>
+          <div>
+            <h2 class="section-title" id="components-title">Creative CSS Components</h2>
+            <p>Production-ready patterns built with pure HTML &amp; CSS.</p>
+          </div>
+        </div>
+
+        <!-- Animated buttons -->
+        <article class="card topic">
+          <h4 class="sub">🔘 Animated Buttons</h4>
+          <div class="btn-row">
+            <button class="ab-1"><span>Shine</span></button>
+            <button class="ab-2">Outline Glow</button>
+            <button class="ab-3">3D Press</button>
+            <button class="btn-gradient">Gradient</button>
+          </div>
+        </article>
+
+        <!-- Hover card + animated nav -->
+        <div class="grid grid-2">
+          <article class="card topic">
+            <h4 class="sub">🖼️ Animated Hover Card</h4>
+            <div class="stage"><div class="hover-card"><div class="bg"></div><div class="overlay"><strong>Aurora</strong><br /><span style="font-size:.82rem;">Hover to reveal caption</span></div></div></div>
+          </article>
+
+          <article class="card topic">
+            <h4 class="sub">🧭 Animated Navigation</h4>
+            <div class="stage"><nav class="anim-nav"><a href="#">Home</a><a href="#">About</a><a href="#">Work</a><a href="#">Blog</a></nav></div>
+          </article>
+        </div>
+
+        <!-- Image hover gallery -->
+        <article class="card topic">
+          <h4 class="sub">🌅 Image Hover Gallery</h4>
+          <div class="gallery">
+            <div class="g-item"><div class="bg"></div><div class="cap">Aurora</div></div>
+            <div class="g-item"><div class="bg"></div><div class="cap">Sunset</div></div>
+            <div class="g-item"><div class="bg"></div><div class="cap">Ocean</div></div>
+            <div class="g-item"><div class="bg"></div><div class="cap">Cosmos</div></div>
+            <div class="g-item"><div class="bg"></div><div class="cap">Forest</div></div>
+            <div class="g-item"><div class="bg"></div><div class="cap">Candy</div></div>
+          </div>
+        </article>
+
+        <!-- Loaders & progress -->
+        <div class="grid grid-2">
+          <article class="card topic">
+            <h4 class="sub">⏳ Loading Indicators</h4>
+            <div class="load-row">
+              <div class="spinner"></div>
+              <div class="dot-loader"><span></span><span></span><span></span></div>
+              <div class="bar-loader"><i></i></div>
+            </div>
+          </article>
+
+          <article class="card topic">
+            <h4 class="sub">📊 Animated Progress Bars</h4>
+            <div class="pb p1"><i></i></div>
+            <div class="pb p2"><i></i></div>
+            <div class="pb p3"><i></i></div>
+          </article>
+        </div>
+
+        <!-- Notifications & profile -->
+        <div class="grid grid-2">
+          <article class="card topic">
+            <h4 class="sub">🔔 Notification Cards</h4>
+            <div class="notif" style="margin-bottom:10px;"><span class="ico">✅</span><div><div class="ttl">Success</div><div class="desc">Your changes were saved.</div></div></div>
+            <div class="notif warn" style="margin-bottom:10px;"><span class="ico">⚠️</span><div><div class="ttl">Warning</div><div class="desc">Storage almost full.</div></div></div>
+            <div class="notif err"><span class="ico">⛔</span><div><div class="ttl">Error</div><div class="desc">Could not reach the server.</div></div></div>
+          </article>
+
+          <article class="card topic">
+            <h4 class="sub">👤 Profile Card</h4>
+            <div class="stage"><div class="profile-card"><div class="avatar">Z</div><div class="name">Zoe Designer</div><div class="role">UI / Motion Engineer</div><div class="stats-row"><div><div class="num">128</div><div class="lbl">Posts</div></div><div><div class="num">4.2k</div><div class="lbl">Followers</div></div><div><div class="num">312</div><div class="lbl">Following</div></div></div></div></div>
+          </article>
+        </div>
+
+        <!-- Pricing -->
+        <article class="card topic">
+          <h4 class="sub">💳 Pricing Cards</h4>
+          <div class="price-row">
+            <div class="price-card"><div class="plan">Starter</div><div class="price">$0 <span>/mo</span></div><ul><li>10 projects</li><li>Community support</li><li>1 GB storage</li></ul><button class="btn btn-ghost">Choose</button></div>
+            <div class="price-card featured"><span class="badge hot" style="margin-bottom:8px;">Popular</span><div class="plan">Pro</div><div class="price">$19 <span>/mo</span></div><ul><li>Unlimited projects</li><li>Priority support</li><li>100 GB storage</li><li>Custom domains</li></ul><button class="btn btn-primary">Choose</button></div>
+            <div class="price-card"><div class="plan">Team</div><div class="price">$49 <span>/mo</span></div><ul><li>Everything in Pro</li><li>10 team seats</li><li>SSO &amp; audit logs</li></ul><button class="btn btn-ghost">Choose</button></div>
+          </div>
+        </article>
+
+        <!-- Timeline -->
+        <article class="card topic">
+          <h4 class="sub">📅 Timeline</h4>
+          <div class="timeline">
+            <div class="t-item"><div class="when">2024 · Q1</div><div class="ttl">Project kickoff</div><p>Defined scope &amp; design system.</p></div>
+            <div class="t-item"><div class="when">2024 · Q2</div><div class="ttl">Alpha release</div><p>Shipped the core feature set.</p></div>
+            <div class="t-item"><div class="when">2024 · Q4</div><div class="ttl">Public launch 🎉</div><p>Opened to all users worldwide.</p></div>
+          </div>
+        </article>
+
+        <!-- Accordion (pure CSS) -->
+        <article class="card topic">
+          <h4 class="sub">📂 Accordion (pure CSS, no JS)</h4>
+          <div class="acc-item"><input type="checkbox" id="acc1" /><label for="acc1">What is CSS animation? <span class="arrow">›</span></label><div class="content">A way to animate element styles using @keyframes — no JavaScript needed.</div></div>
+          <div class="acc-item"><input type="checkbox" id="acc2" /><label for="acc2">Is CSS animation performant? <span class="arrow">›</span></label><div class="content">Yes — animate <code class="inline">transform</code> &amp; <code class="inline">opacity</code> for 60fps, since they run on the GPU.</div></div>
+          <div class="acc-item"><input type="checkbox" id="acc3" /><label for="acc3">Can I pause an animation on hover? <span class="arrow">›</span></label><div class="content">Absolutely: <code class="inline">.box:hover { animation-play-state: paused; }</code></div></div>
+        </article>
+
+        <!-- Tooltip, badge, ribbon, glass, fab -->
+        <div class="grid grid-3">
+          <article class="card topic">
+            <h4 class="sub">💬 Tooltip</h4>
+            <div class="stage"><div class="tip-wrap"><button class="btn btn-ghost">Hover me</button><span class="tip">I'm a tooltip!</span></div></div>
+          </article>
+
+          <article class="card topic">
+            <h4 class="sub">🏷️ Badges</h4>
+            <div class="stage" style="gap:10px; flex-wrap:wrap; display:flex; justify-content:center;">
+              <span class="badge new">NEW</span>
+              <span class="badge hot">HOT</span>
+              <span class="badge beta">BETA</span>
+            </div>
+          </article>
+
+          <article class="card topic">
+            <h4 class="sub">🎀 Ribbon</h4>
+            <div class="stage"><div class="ribbon-wrap"><span class="ribbon">SALE</span>Card</div></div>
+          </article>
+
+          <article class="card topic">
+            <h4 class="sub">🧊 Glass Card</h4>
+            <div class="glass-stage" style="min-height:160px;"><div class="gcomp">Translucent + blurred</div></div>
+          </article>
+
+          <article class="card topic">
+            <h4 class="sub">➕ Floating Action Button</h4>
+            <div class="stage"><button class="fab fab-pulse" aria-label="Add">+</button></div>
+          </article>
+        </div>
+      </section>
+
+      <!-- =============================================================
+           SECTION 11 — MINI ANIMATION GALLERY (27)
+           ============================================================= -->
+      <section class="section" id="sec-gallery" aria-labelledby="gallery-title">
+        <div class="section-head">
+          <div class="section-badge">11</div>
+          <div>
+            <h2 class="section-title" id="gallery-title">Mini Animation Gallery</h2>
+            <p>27 self-running animations to copy &amp; paste. Every one is pure CSS.</p>
+          </div>
+        </div>
+
+        <div class="gallery-grid">
+          <div class="gallery-cell ga-fade"><div class="g-item-box"></div><span class="label">fade</span></div>
+          <div class="gallery-cell ga-slide"><div class="g-item-box"></div><span class="label">slide</span></div>
+          <div class="gallery-cell ga-bounce"><div class="g-item-box"></div><span class="label">bounce</span></div>
+          <div class="gallery-cell ga-rotate"><div class="g-item-box"></div><span class="label">rotate</span></div>
+          <div class="gallery-cell ga-pulse"><div class="g-item-box"></div><span class="label">pulse</span></div>
+          <div class="gallery-cell ga-zoom"><div class="g-item-box"></div><span class="label">zoom</span></div>
+          <div class="gallery-cell ga-spin"><div class="g-item-box"></div><span class="label">spin</span></div>
+          <div class="gallery-cell ga-shake"><div class="g-item-box"></div><span class="label">shake</span></div>
+          <div class="gallery-cell ga-swing"><div class="g-item-box"></div><span class="label">swing</span></div>
+          <div class="gallery-cell ga-flip"><div class="g-item-box"></div><span class="label">flip</span></div>
+          <div class="gallery-cell ga-heart"><div class="g-item-box"></div><span class="label">heartbeat</span></div>
+          <div class="gallery-cell ga-spinner"><div class="g-item-box"></div><span class="label">spinner</span></div>
+          <div class="gallery-cell ga-typing"><div class="g-item-box"><span class="typing">hi!</span></div><span class="label">typing</span></div>
+          <div class="gallery-cell ga-progress"><div class="g-item-box"></div><span class="label">progress</span></div>
+          <div class="gallery-cell ga-float"><div class="g-item-box"></div><span class="label">float</span></div>
+          <div class="gallery-cell ga-blink"><div class="g-item-box"></div><span class="label">blink</span></div>
+          <div class="gallery-cell ga-wave"><div class="wave"><span></span><span></span><span></span><span></span><span></span></div><span class="label">wave</span></div>
+          <div class="gallery-cell ga-glow"><div class="g-item-box"></div><span class="label">glow</span></div>
+          <div class="gallery-cell ga-wiggle"><div class="g-item-box"></div><span class="label">wiggle</span></div>
+          <div class="gallery-cell ga-jitter"><div class="g-item-box"></div><span class="label">jitter</span></div>
+          <div class="gallery-cell ga-morph"><div class="g-item-box"></div><span class="label">morph</span></div>
+          <div class="gallery-cell ga-grad"><div class="g-item-box"></div><span class="label">gradient shift</span></div>
+          <div class="gallery-cell ga-orbit"><div class="g-item-box"></div><span class="label">orbit</span></div>
+          <div class="gallery-cell ga-ring"><div class="g-item-box"></div><span class="label">ring pulse</span></div>
+          <div class="gallery-cell ga-tilt"><div class="g-item-box"></div><span class="label">tilt</span></div>
+          <div class="gallery-cell ga-squash"><div class="g-item-box"></div><span class="label">squash</span></div>
+          <div class="gallery-cell ga-flicker"><div class="g-item-box"></div><span class="label">neon flicker</span></div>
+        </div>
+      </section>
+
+      <!-- =============================================================
+           SECTION 12 — PRACTICE CHALLENGES
+           ============================================================= -->
+      <section class="section" id="sec-challenges" aria-labelledby="challenges-title">
+        <div class="section-head">
+          <div class="section-badge">12</div>
+          <div>
+            <h2 class="section-title" id="challenges-title">Practice Challenges</h2>
+            <p>Six mini-builds. Each card shows the expected output &amp; the solution (click to reveal).</p>
+          </div>
+        </div>
+
+        <div class="challenge-grid">
+
+          <!-- 1 Loading Spinner -->
+          <article class="challenge">
+            <div class="preview"><div class="spinner"></div></div>
+            <div class="body">
+              <h4>1 · Loading Spinner</h4>
+              <p>A ring that spins continuously.</p>
+              <details><summary>Show solution</summary>
+                <div class="code-block" data-lang="HTML"><pre>&lt;div class="spinner"&gt;&lt;/div&gt;</pre></div>
+                <div class="code-block" data-lang="CSS"><pre>.spinner {
+  width: 54px; height: 54px; border-radius: 50%;
+  border: 6px solid rgba(124,92,255,.2);
+  border-top-color: #7c5cff;
+  animation: spin .9s linear infinite;
+}
+@keyframes spin { to { transform: rotate(360deg); } }</pre></div>
+              </details>
+            </div>
+          </article>
+
+          <!-- 2 Neon Button -->
+          <article class="challenge">
+            <div class="preview"><button class="ab-2">NEON</button></div>
+            <div class="body">
+              <h4>2 · Neon Button</h4>
+              <p>A glowing outline button that fills on hover.</p>
+              <details><summary>Show solution</summary>
+                <div class="code-block" data-lang="CSS"><pre>.neon {
+  border: 2px solid #21d4fd; color: #21d4fd;
+  background: transparent; padding: 12px 26px;
+  transition: all .35s;
+}
+.neon:hover {
+  background: #21d4fd; color: #0b1020;
+  box-shadow: 0 0 24px #21d4fd;
+}</pre></div>
+              </details>
+            </div>
+          </article>
+
+          <!-- 3 Hover Card -->
+          <article class="challenge">
+            <div class="preview" style="padding:14px;"><div class="hover-card" style="width:160px;height:180px;"><div class="bg"></div><div class="overlay" style="padding:12px;"><strong>Card</strong></div></div></div>
+            <div class="body">
+              <h4>3 · Hover Card</h4>
+              <p>Image zooms &amp; caption slides up on hover.</p>
+              <details><summary>Show solution</summary>
+                <div class="code-block" data-lang="CSS"><pre>.card { overflow: hidden; }
+.card .bg { transition: transform .6s; }
+.card .cap { transform: translateY(100%); transition: transform .6s; }
+.card:hover .bg  { transform: scale(1.12); }
+.card:hover .cap { transform: translateY(0); }</pre></div>
+              </details>
+            </div>
+          </article>
+
+          <!-- 4 Floating Button -->
+          <article class="challenge">
+            <div class="preview"><button class="fab fab-pulse" aria-label="add">+</button></div>
+            <div class="body">
+              <h4>4 · Floating Action Button</h4>
+              <p>A round FAB with a pulsing ring.</p>
+              <details><summary>Show solution</summary>
+                <div class="code-block" data-lang="CSS"><pre>.fab {
+  width: 60px; height: 60px; border-radius: 50%;
+  background: var(--grad-brand); color: #fff;
+  box-shadow: 0 24px 60px rgba(0,0,0,.45);
+  animation: fabPulse 2s ease infinite;
+}
+@keyframes fabPulse {
+  0%,100% { box-shadow: 0 0 0 0 rgba(124,92,255,.6); }
+  50%     { box-shadow: 0 0 0 18px rgba(124,92,255,0); }
+}</pre></div>
+              </details>
+            </div>
+          </article>
+
+          <!-- 5 Glass Card -->
+          <article class="challenge">
+            <div class="preview"><div class="gcomp" style="width:80%;">Frosted glass</div></div>
+            <div class="body">
+              <h4>5 · Glass Card</h4>
+              <p>The frosted-glass effect over a colorful backdrop.</p>
+              <details><summary>Show solution</summary>
+                <div class="code-block" data-lang="CSS"><pre>.glass {
+  background: rgba(255,255,255,.1);
+  border: 1px solid rgba(255,255,255,.2);
+  backdrop-filter: blur(12px) saturate(160%);
+  -webkit-backdrop-filter: blur(12px) saturate(160%);
+}</pre></div>
+              </details>
+            </div>
+          </article>
+
+          <!-- 6 Gradient Background -->
+          <article class="challenge">
+            <div class="preview"><div style="width:80%;height:90px;border-radius:14px;background:var(--grad-aurora);background-size:300% 300%;animation:ga-grad 4s ease infinite;box-shadow:var(--sh-md);"></div></div>
+            <div class="body">
+              <h4>6 · Animated Gradient Background</h4>
+              <p>A multi-stop gradient that shimmers forever.</p>
+              <details><summary>Show solution</summary>
+                <div class="code-block" data-lang="CSS"><pre>.bg {
+  background: linear-gradient(120deg,#7c5cff,#21d4fd,#38e3a4,#ff5c8a);
+  background-size: 300% 300%;
+  animation: grad 4s ease infinite;
+}
+@keyframes grad {
+  0%,100% { background-position: 0% 50%; }
+  50%     { background-position: 100% 50%; }
+}</pre></div>
+              </details>
+            </div>
+          </article>
+
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <!-- =================================================================
+       FOOTER
+       ================================================================= -->
+  <footer class="site-footer" id="footer">
+    <div class="footer-inner">
+      <div>
+        <div class="brand" style="margin-bottom:10px;">
+          <span class="logo" aria-hidden="true">✦</span>
+          <span>CSS Animations &amp; Visual Effects Explorer</span>
+        </div>
+        <p style="max-width:46ch;">
+          A complete, hands-on reference for modern CSS motion &amp; visual styling.
+          Every demo runs in your browser with <strong>zero JavaScript</strong> —
+          pure HTML5 &amp; CSS3, ready to copy into your own projects.
+        </p>
+        <p style="margin-top:8px;"><span class="pill green">Made for CSS Learning</span></p>
+      </div>
+
+      <div>
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="#sec-transform">Transforms</a></li>
+          <li><a href="#sec-transition">Transitions</a></li>
+          <li><a href="#sec-animation">Animations</a></li>
+          <li><a href="#sec-gallery">Gallery</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Visual Effects</h4>
+        <ul>
+          <li><a href="#sec-shadows">Shadows</a></li>
+          <li><a href="#sec-gradients">Gradients</a></li>
+          <li><a href="#sec-filters">Filters</a></li>
+          <li><a href="#sec-backdrop">Glassmorphism</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© <time>2026</time> CSS Animations &amp; Visual Effects Explorer</span>
+      <span>Crafted with HTML5 + CSS3 · No frameworks, no JavaScript.</span>
+    </div>
+  </footer>
+
+</body>
+</html>
